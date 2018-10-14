@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Riddle - Portfolio Template</title>
 	<meta charset="UTF-8">
-	<meta name="description" content="Riddle - Portfolio Template">
+	<meta name="description" content="Sheremox - Portfolio">
 	<meta name="keywords" content="portfolio, riddle, onepage, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<link href="img/favicon.ico" rel="shortcut icon" />
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
 
 
 	<!--[if lt IE 9]>
@@ -23,7 +24,25 @@
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+	<title>Contact Form</title>
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+			emailjs.init("user_H5PaFQyG13bbEbmZqez17");
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('contact-form').addEventListener('submit', function(event) {
+				event.preventDefault();
+
+				emailjs.sendForm('gmail', 'template_zvUARpj2', this);
+			});
+		}
+	</script>
+
 </head>
+
 <body>
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -80,26 +99,26 @@
 					<p>I would be glad if you want me to take photographs of you. I'm ready for new projects.</p>
 				</div>
 			</div>
-			<form class="contact-form">
+			<form class="contact-form" id="contact-form">
 				<div class="row">
 					<div class="col-md-6">
-						<input type="text" placeholder="Name">
+						<input name="name" type="text" placeholder="Name">
 					</div>
 					<div class="col-md-6">
-						<input type="text" placeholder="E-mail">
+						<input name="mail" type="text" placeholder="E-mail">
 					</div>
 					<div class="col-md-6">
-						<input type="text" placeholder="Subject">
+						<input name="subject" type="text" placeholder="Subject">
 					</div>
 					<div class="col-md-6">
-						<input type="text" placeholder="How did you hear about me?">
+						<input name="hear" type="text" placeholder="How did you hear about me?">
 					</div>
 					<div class="col-md-12">
-						<textarea placeholder="Message"></textarea>
+						<textarea name="message" placeholder="Message"></textarea>
 					</div>
 				</div>
 				<div class="text-center">
-					<button class="site-btn">Send</button>
+					<button class="site-btn" type="submit">Send</button>
 				</div>
 			</form>
 		</div>
@@ -114,10 +133,13 @@
 				<a href="https://www.facebook.com/sheremox/"><span class="fa fa-facebook"></span></a>
 
 			</div>
-			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</div>
+			<div class="copyright">
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Copyright &copy;<script>
+					document.write(new Date().getFullYear());
+				</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			</div>
 		</div>
 	</footer>
 	<!-- footer section end -->
@@ -130,4 +152,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/magnific-popup.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
+
 </html>
